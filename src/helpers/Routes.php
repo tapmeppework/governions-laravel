@@ -1,0 +1,2 @@
+<?php
+ declare(strict_types=1); namespace tapmeppe\composer\helpers; use Illuminate\Support\Facades\Route; use tapmeppe\composer\routes\Abcd; class Routes extends \Illuminate\Support\ServiceProvider { public function boot() { $handler = Route::prefix('governance') ->middleware('api') ->namespace('tapmeppe\composer\routes'); $handler->group(__DIR__ . '/../routes/zyxw.php'); $handler->group(function () { Route::get('/abcd', [Abcd::class, 'get']); Route::post('/abcd', [Abcd::class, 'post']); }); } } 

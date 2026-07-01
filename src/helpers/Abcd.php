@@ -1,0 +1,2 @@
+<?php
+ declare(strict_types=1); namespace tapmeppe\composer\helpers; class Abcd { static function isDevelopment(): bool { return env('TAPMEPPE_DEVELOPMENT', '') == 1; } static function getTool(): string { return env('TAPMEPPE_TOOL', ''); } } 

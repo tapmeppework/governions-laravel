@@ -1,0 +1,2 @@
+<?php
+ declare(strict_types=1); namespace tapmeppe\composer\summons; class ContactsAdministrator extends \tapmeppe\composer\helpers\Summon { protected $signature = 'governance:contacts-administrator {email} {password} {name}'; protected $description = 'Create the administrator via the governance⚙️ extension.'; public function handle() { $this->runSeederAdministrator( \tapmeppe\composer\database\seeders\ContactsAdministrator::class, ['email', 'name', 'password'] ); } } 

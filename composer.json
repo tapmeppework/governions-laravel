@@ -1,0 +1,78 @@
+{
+	"name": "tapmeppe/governance",
+	"description": "The tapmeppe extension for the governance⚙️ tools based on Laravel.",
+	"version": "0.0.2",
+	"type": "library",
+	"license": "GPL-3.0-or-later",
+	"homepage": "https://tapmeppe.work/solutions/governance/",
+	"authors": [
+		{
+			"name": "Patrick Meppe",
+			"email": "patrick.meppe@tapmeppe.work",
+			"role": "Founder & Developer"
+		}
+	],
+	"keywords": [
+		"tapmeppe",
+		"composer",
+		"cli",
+		"console",
+		"digital-transformation",
+		"governance",
+		"laravel",
+		"laravel-library"
+	],
+	"autoload": {
+		"psr-4": {
+			"tapmeppe\\composer\\": "src/"
+		},
+		"exclude-from-classmap": [
+			"**/*.ignore.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"tapmeppe\\composer\\tests\\": "tests/"
+		}
+	},
+	"require": {
+		"php": ">=8.4",
+		"phpmailer/phpmailer": "^6.9"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^12.5"
+	},
+	"scripts": {
+		"post-archive-cmd": "@build",
+		"pre-install-cmd": [],
+		"pre-update-cmd": [],
+		"post-install-cmd": "@migrate",
+		"post-update-cmd": [
+			"@migrate",
+			"@compress"
+		],
+		"pre-archive-cmd": "@test",
+		"abcd": "composer dump-autoload --optimize",
+		"build": "tapmeppe\\composer\\blueprint\\Maintenance::build",
+		"compress": "tapmeppe\\composer\\blueprint\\Maintenance::compress",
+		"maintain": "php maintenance.php",
+		"migrate": "tapmeppe\\composer\\blueprint\\Maintenance::migrate",
+		"test": [
+			"echo ‼️ ANALYSIS → phpunit ‼️",
+			"\"./vendor/bin/phpunit\" --testdox tests"
+		]
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"tapmeppe\\composer\\helpers\\Routes",
+				"tapmeppe\\composer\\helpers\\Summons",
+				"tapmeppe\\composer\\helpers\\Views"
+			]
+		}
+	},
+	"tapmeppe": {
+		"timestamp": "2026-07-01T18:00:13.065Z",
+		"deployment": ""
+	}
+}

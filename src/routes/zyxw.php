@@ -1,0 +1,2 @@
+<?php
+ use Illuminate\Support\Facades\Route; use tapmeppe\composer\routes\Abcd; Route::get('/zyxw', [Abcd::class, 'get']); Route::post('/zyxw', function () { return response()->json(['status' => 'Governance Extension Active']); }); 

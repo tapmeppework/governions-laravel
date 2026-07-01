@@ -1,0 +1,2 @@
+<?php
+ declare(strict_types=1); namespace tapmeppe\composer\helpers; use Illuminate\Support\Facades\Event; class Summons extends \Illuminate\Support\ServiceProvider { public function boot() { if ($this->app->runningInConsole()) $this->commands([ \tapmeppe\composer\summons\AbcdUserCreation::class, \tapmeppe\composer\summons\AbcdUserUpdate::class, \tapmeppe\composer\summons\AbcdViewsExtension::class, \tapmeppe\composer\summons\AccountingAdministrator::class, ]); } } 

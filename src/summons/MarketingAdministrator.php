@@ -1,0 +1,2 @@
+<?php
+ declare(strict_types=1); namespace tapmeppe\composer\summons; class MarketingAdministrator extends \tapmeppe\composer\helpers\Summon { protected $signature = 'governance:marketing-administrator {email} {password} {name} {--company}'; protected $description = 'Create the administrator via the governance⚙️ extension.'; public function handle() { $this->runSeederAdministrator( \tapmeppe\composer\database\seeders\MarketingAdministrator::class, ['email', 'name', 'password'], ['company'] ); } } 

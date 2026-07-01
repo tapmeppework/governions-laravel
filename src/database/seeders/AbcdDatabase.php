@@ -1,0 +1,2 @@
+<?php
+ declare(strict_types=1); namespace tapmeppe\composer\database\seeders; class AbcdDatabase extends \tapmeppe\composer\helpers\Seeder { public function runInner(array $parameters): bool { return true; } } 

@@ -1,0 +1,2 @@
+<?php
+ declare(strict_types=1); namespace tapmeppe\composer\helpers; abstract class Seeder extends \Illuminate\Database\Seeder { public final function run(array $parameters = []): bool { if ($parameters) return $this->runInner($parameters); return false; } protected abstract function runInner(array $parameters): bool; } 
