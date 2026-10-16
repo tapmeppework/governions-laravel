@@ -1,7 +1,7 @@
 {
 	"name": "tapmeppe/governance",
 	"description": "The tapmeppe extension for the governance⚙️ tools based on Laravel.",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"type": "library",
 	"license": "GPL-3.0-or-later",
 	"homepage": "https://tapmeppe.work/solutions/governance/",
@@ -62,7 +62,7 @@
 		}
 	},
 	"tapmeppe": {
-		"timestamp": "2026-07-09T19:41:55.142Z",
+		"timestamp": "2026-10-16T21:33:21.280Z",
 		"deployment": ""
 	}
 }
